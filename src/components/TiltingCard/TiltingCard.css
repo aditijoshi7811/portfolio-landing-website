@@ -1,0 +1,61 @@
+/*
+  The main container that holds the card.
+  It needs a 'perspective' to create the 3D space for its children.
+*/
+.tilting-card-container {
+  /* This value determines the "depth" of the 3D effect. */
+  perspective: 1000px; 
+  /* We use a custom property for the transition for finer control */
+  --transition-speed: 0.1s;
+  will-change: transform;
+}
+
+/*
+  This is the actual card content that will be transformed.
+*/
+.tilting-card-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  max-width: 28rem; /* Equivalent to max-w-lg */
+  padding: 1.5rem; /* Equivalent to p-6 */
+  background-color: #1e1e2d;
+  border-radius: 1.5rem; /* Equivalent to rounded-3xl */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* Equivalent to shadow-2xl */
+  
+  /* This preserves the 3D transformations */
+  transform-style: preserve-3d;
+  
+  /* Smooth transition for when the mouse leaves the card */
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/*
+  The dynamic glare effect.
+  We use a pseudo-element with a radial gradient positioned by JS.
+*/
+.tilting-card-content::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit; /* Match the parent's border radius */
+  z-index: 2; /* Ensure it's on top of the content */
+
+  /* The radial gradient creates the glare. Its position is updated by JS. */
+  background: radial-gradient(
+    250px circle at var(--mouse-x, -250px) var(--mouse-y, -250px),
+    rgba(255, 255, 255, 0.1),
+    transparent 80%
+  );
+
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+
+/*
+  When the parent container is hovered, make the glare visible.
+*/
+.tilting-card-container:hover .tilting-card-content::before {
+  opacity: 1;
+}
