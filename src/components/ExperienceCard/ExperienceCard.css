@@ -1,0 +1,31 @@
+.experience-card {
+  /* This parent needs to be relative to contain the absolutely positioned SVG */
+  position: relative;
+}
+
+.animated-border .path {
+  fill: none;
+  stroke: #10B981; /* Green color */
+  stroke-width: 2;
+  stroke-linecap: round;
+  
+  /* This creates the dashed pattern. 
+     '4' is the length of the dash, '8' is the length of the gap. */
+  stroke-dasharray: 4 8;
+  
+  /* Animation properties */
+  animation: draw-border 10s linear infinite;
+}
+
+/* The animation works by changing the starting offset of the dash pattern,
+   which makes it look like it's moving along the path. */
+@keyframes draw-border {
+  from {
+    /* The total length of one dash + one gap is 12 (4 + 8).
+       Animating to this value makes the loop seamless. */
+    stroke-dashoffset: 12;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
