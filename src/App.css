@@ -28,6 +28,14 @@
   color: #61dafb;
 }
 
+body {
+  /* This is your dark background color */
+  background-color: #111111;
+
+  /* This is the SVG grid pattern */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='96' height='96' fill='none' stroke='rgb(255 255 255 / 0.05)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

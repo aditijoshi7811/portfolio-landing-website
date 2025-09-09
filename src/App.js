@@ -4,7 +4,7 @@ import SpinningBorderCard from './components/SpinningBorderCard/SpinningBorderCa
 import TiltingCard from './components/TiltingCard/TiltingCard';
 import ExperienceCard from './components/ExperienceCard/ExperienceCard';
 import Timeline from './components/Timeline/Timeline';
-
+import HeroCard from './components/HeroCard/HeroCard';
 function App() {
   const projectData = {
     title: "Gobi Deluxe Hotel&Resorts",
@@ -70,9 +70,36 @@ const timelineData = [
     ],
   }
 ];
+
+const myLandingData = {
+  jobTitle: "Software Engineer",
+  greeting: "Hello I'm",
+  firstName: "Radnaabazar",
+  lastName: "Bulgan",
+  tagline: "IT Specialist & Full-Stack Developer | Pragmatic, delivery-oriented professional",
+  cvUrl: "/radnaabazar-bulgan-cv.pdf",
+  socialLinks: [
+    { name: 'facebook', url: 'https://facebook.com' },
+    { name: 'instagram', url: 'https://instagram.com' },
+    { name: 'github', url: 'https://github.com' },
+  ],
+  stats: [
+    { value: "21", label: "Age" },
+    { value: "3", label: "Years of experience" },
+    { value: "20", label: "Projects worked on" },
+    { value: "5", label: "Projects Deployed" },
+  ],
+};
+
+const MyCircularImage = () => (
+  <div className="h-64 w-64 md:h-80 md:w-80 rounded-full bg-zinc-800 border-2 border-green-400 flex items-center justify-center text-zinc-500">
+    {/* Your actual image would go here */}
+    <p>My Image</p>
+  </div>
+);
   
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-900">
+    <div>
       {/* <SpinningBorderAvatar
         src="/profile.jpeg"
         size={250}
@@ -107,11 +134,21 @@ const timelineData = [
         </>
       ))} */}
 
-      <div className="min-h-screen bg-zinc-900 px-4 py-16 sm:px-8 md:px-24">
+      {/* <div className="min-h-screen bg-zinc-900 px-4 py-16 sm:px-8 md:px-24">
       <div className="mx-auto max-w-4xl">
         <Timeline data={timelineData} />
       </div>
-    </div>
+    </div> */}
+
+    <HeroCard 
+        data={myLandingData} 
+        imageComponent={<SpinningBorderAvatar
+        src="/profile.jpeg"
+        size={250}
+        speed={8}
+        borderWidth={6}
+      />} 
+      />
     </div>
   );
 }
