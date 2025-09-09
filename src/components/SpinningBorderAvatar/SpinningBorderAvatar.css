@@ -1,0 +1,31 @@
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow linear infinite;
+}
+
+.bg-gradient-conic {
+  background: conic-gradient(
+    from 0deg,
+    #00ff99 0%,
+    #00ff99 10%,
+    transparent 10%,
+    transparent 30%,
+    #00ff99 30%,
+    #00ff99 40%,
+    transparent 40%,
+    transparent 60%,
+    #00ff99 60%,
+    #00ff99 70%,
+    transparent 70%,
+    transparent 100%
+  );
+  border-radius: 9999px;
+}
