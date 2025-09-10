@@ -100,7 +100,7 @@ const MyCircularImage = () => (
   
   return (
     <div>
-      {/* <SpinningBorderAvatar
+      <SpinningBorderAvatar
         src="/profile.jpeg"
         size={250}
         speed={8}
@@ -117,9 +117,9 @@ const MyCircularImage = () => (
         imageUrl={projectData.imageUrl}
         liveSiteUrl={projectData.liveSiteUrl}
         techStackIcons={projectData.techStackIcons}
-      /> */}
+      /> 
 
-      {/* {educationData.map((edu, index) => (
+      {educationData.map((edu, index) => (
         <>
         <ExperienceCard
           key={index}
@@ -132,7 +132,7 @@ const MyCircularImage = () => (
         />
         &nbsp;
         </>
-      ))} */}
+      ))}
 
       {/* <div className="min-h-screen bg-zinc-900 px-4 py-16 sm:px-8 md:px-24">
       <div className="mx-auto max-w-4xl">
