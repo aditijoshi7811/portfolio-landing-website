@@ -8,6 +8,7 @@ module.exports = {
       fontFamily: {
         // Add "Space Mono" as a new font family
         mono: ['"Space Mono"', 'monospace'],
+        inconsolata: ['Inconsolata', 'monospace'],
       },
     },
   },

@@ -10,7 +10,7 @@ const TimelineItem = ({ year, description, features, images }) => {
   return (
     <div className="relative md:flex md:gap-8">
       
-      <div className="absolute left-5 top-1 h-5 w-5 -translate-x-1/2 transform rounded-full border-2 border-zinc-600 bg-zinc-900"></div>
+      <div className="absolute left-5 top-1 h-5 w-5 -translate-x-1/2 transform rounded-full border-2 border-zinc-600"></div>
 
       <div className="w-full md:w-28 md:flex-shrink-0">
         <h3 className="hidden font-mono text-3xl font-bold text-zinc-400 md:block md:text-right">
