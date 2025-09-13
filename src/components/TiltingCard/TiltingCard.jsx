@@ -43,7 +43,7 @@ const TiltingCard = ({ title, description, imageUrl, liveSiteUrl, techStackIcons
 
   return (
     // The ref is now on this wrapper div which handles the 3D effect
-    <div ref={cardRef} className="tilting-card-container">
+    <div ref={cardRef} className="tilting-card-container w-fit m-4">
       <a 
         href={liveSiteUrl} 
         target="_blank" 

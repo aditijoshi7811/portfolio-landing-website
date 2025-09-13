@@ -1,0 +1,31 @@
+/* Container */
+.navbar-container {
+  @apply flex justify-between items-center px-8 py-4 text-white;
+}
+
+/* Logo */
+.navbar-logo {
+  @apply text-2xl font-bold;
+}
+
+.navbar-logo .dot {
+  @apply text-green-400;
+}
+
+/* Links */
+.navbar-links {
+  @apply flex gap-6 text-lg;
+}
+
+.navbar-links a {
+  @apply text-white hover:text-green-400 transition-colors;
+}
+
+.navbar-links a.active {
+  @apply text-green-400 border-b-2 border-green-400 pb-1;
+}
+
+/* Language Button */
+.navbar-lang .lang-btn {
+  @apply bg-green-400 text-black font-medium px-5 py-2 rounded-full flex items-center gap-2;
+}
