@@ -22,10 +22,10 @@ function App() {
         <HeroCard
           data={myLandingData}
           imageComponent={<SpinningBorderAvatar
-            src="/profile.jpeg"
+            src="/aditi_profile.jpg"
             size={330}
             speed={8}
-            borderWidth={6}
+            borderWidth={10}
           />}
         />
 
@@ -85,7 +85,7 @@ function App() {
           <SpinningBorderCard
             title="Software Developer Intern | Xlpat Labs"
             description="Supported SaaS product development through UI/UX analysis, reusable component creation, and QA testing, reducing front-end defects by 15%."
-            avatarUrl="/hacker.png"
+            avatarUrl="/3d.png"
           />
         </div>
 
@@ -98,19 +98,19 @@ function App() {
 
         <div id="projects" className='grid grid-cols-1 lg:grid-cols-2 gap-8 place-items-center'>
           <TiltingCard
-            title={projectData.title}
-            description={projectData.description}
-            imageUrl={projectData.imageUrl}
-            liveSiteUrl={projectData.liveSiteUrl}
-            techStackIcons={projectData.techStackIcons}
+            title="ContractPodAI"
+            description="An AI-powered Contract Lifecycle Management (CLM) platform that streamlines legal workflows — from contract creation and negotiation to analysis and renewal — with modern, responsive front-end solutions."
+            imageUrl='/contract_pod.jpeg'
+            liveSiteUrl='/contract_pod_demo.mp4'
+            techStackIcons={['react','vuedotjs','typescript','vuetify','redux']}
           />
 
           <TiltingCard
-            title={projectData.title}
-            description={projectData.description}
-            imageUrl={projectData.imageUrl}
-            liveSiteUrl={projectData.liveSiteUrl}
-            techStackIcons={projectData.techStackIcons}
+            title="Kalido"
+            description="An AI-driven opportunity network that connects people, teams, and organizations by matching skills, goals, and interests — enabling faster hiring, collaboration, and professional growth."
+            imageUrl='/kalido.jpeg'
+            liveSiteUrl='/kalido_demo.mp4'
+            techStackIcons={['react','vuedotjs','typescript','goland','graphql']}
           />
         </div>
 

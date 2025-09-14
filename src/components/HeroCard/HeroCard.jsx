@@ -68,7 +68,7 @@ const HeroCard = ({ data, imageComponent }) => {
             
             {/* --- WRAP SOCIAL LINKS WITH TOOLTIP --- */}
             {socialLinks.map((link) => (
-              <Tooltip key={link.name} text={`Find me on ${link.name}`}>
+              <Tooltip key={link.name} text={`${link.name}`}>
                 <a 
                   href={link.url} 
                   target={link.url.startsWith('#') ? '_self' : '_blank'}
