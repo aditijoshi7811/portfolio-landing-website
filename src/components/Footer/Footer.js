@@ -6,19 +6,14 @@ const Footer = () => {
   const socialLinks = [
     {
       name: 'GitHub',
-      url: 'https://github.com/your-username', // <-- Replace with your URL
+      url: 'https://github.com/aditijoshi7811', // <-- Replace with your URL
       icon: <Github className="h-6 w-6" />,
     },
     {
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/your-profile', // <-- Replace with your URL
+      url: 'https://www.linkedin.com/in/aditi-joshi-463680166/', // <-- Replace with your URL
       icon: <Linkedin className="h-6 w-6" />,
-    },
-    {
-      name: 'Twitter',
-      url: 'https://twitter.com/your-handle', // <-- Replace with your URL
-      icon: <Twitter className="h-6 w-6" />,
-    },
+    }
   ];
 
   return (
