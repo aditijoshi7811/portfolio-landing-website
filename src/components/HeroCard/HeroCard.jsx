@@ -61,7 +61,7 @@ const HeroCard = ({ data, imageComponent }) => {
           <div className="flex items-center gap-2 pt-4">
             {/* --- WRAP DOWNLOAD BUTTON WITH TOOLTIP --- */}
             <Tooltip text="View my CV">
-              <a href={cvUrl} target='_blank' ref='noreferrer' className="flex items-center gap-2 rounded-full border border-zinc-600 px-6 py-3 font-mono text-sm transition hover:border-green-400 hover:text-green-400">
+              <a href={cvUrl} target='_blank' rel="noreferrer" className="flex items-center gap-2 rounded-full border border-zinc-600 px-6 py-3 font-mono text-sm transition hover:border-green-400 hover:text-green-400">
                 View CV <EyeIcon/>
               </a>
             </Tooltip>
