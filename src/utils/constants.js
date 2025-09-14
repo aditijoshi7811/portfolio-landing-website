@@ -12,7 +12,7 @@ const educationData = [
     title: "Certificate",
     dateRange: "Sept 2013 – May 2015",
     score: "92%",
-    institution: "Swami Sant Dass Public School",
+    institution: "Govt. Model Sr. Sec. School, Chandigarh",
     isActive: false,
   },
   {
