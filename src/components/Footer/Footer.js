@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -22,9 +22,9 @@ const Footer = () => {
         {/* Top section with name and social links */}
         <div className="flex flex-col items-center justify-between gap-6 border-b border-zinc-700 pb-6 sm:flex-row">
           <div className="text-center sm:text-left">
-            <a href="#" className="text-xl font-bold text-white hover:text-green-400 transition-colors">
+            <p className="text-xl font-bold text-white hover:text-green-400 transition-colors">
               Aditi Joshi
-            </a>
+            </p>
             <p className="text-sm text-zinc-500">Senior Software Developer</p>
           </div>
           <div className="flex items-center gap-6">

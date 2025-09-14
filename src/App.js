@@ -8,7 +8,7 @@ import HeroCard from './components/HeroCard/HeroCard';
 import Nabvar from './components/Navbar/Navbar';
 import SectionTitle from './components/SectionTitle/SectionTitle';
 import ShortProfile from './components/ShortProfile/ShortProfile';
-import { projectData, educationData, timelineData, myLandingData, shortProfileData } from './utils/constants';
+import {educationData, timelineData, myLandingData, shortProfileData } from './utils/constants';
 import Footer from './components/Footer/Footer';
 import LetsTalk from './components/LetsTalk/LetsTalk';
 import Preloader from './components/PreLoader/PreLoader';
