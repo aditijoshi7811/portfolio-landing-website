@@ -8,21 +8,29 @@ const CheckmarkIcon = () => (
 
 const TimelineItem = ({ year, description, features, images }) => {
   return (
-    <div className="relative md:flex md:gap-8">
+    // Use "items-baseline" for perfect vertical text alignment on desktop
+    <div className="relative md:flex md:items-baseline md:gap-8">
       
-      <div className="absolute left-5 top-1 h-5 w-5 -translate-x-1/2 transform rounded-full border-2 border-zinc-600"></div>
+      {/* --- RESPONSIVE CIRCLE MARKER --- */}
+      {/* Position matches the parent's line: left-5 on mobile, left-28 on desktop */}
+      <div className="absolute left-5 top-3 h-5 w-5 -translate-x-1/2 transform rounded-full border-2 border-zinc-600 bg-zinc-900 md:left-28"></div>
 
-      <div className="w-full md:w-28 md:flex-shrink-0">
+      {/* --- YEAR SECTION --- */}
+      {/* On desktop, this has a fixed width to stay to the left of the line */}
+      <div className="w-full flex-shrink-0 md:w-24">
         <h3 className="hidden font-mono text-3xl font-bold text-zinc-400 md:block md:text-right">
           {year}
         </h3>
+        {/* On mobile, the year is displayed above the content */}
         <h3 className="mb-4 text-center font-mono text-2xl font-bold text-zinc-400 md:hidden">
           {year}
         </h3>
       </div>
       
-      <div className="flex-grow space-y-6 border-l-4 border-transparent pl-10 md:pl-0 md:border-l-0">
-        <p className="font-mono text-zinc-300 leading-relaxed">
+      {/* --- CONTENT SECTION --- */}
+      {/* On mobile, this has left padding to avoid the line */}
+      <div className="flex-grow space-y-6 pl-12 md:pl-0">
+        <p className="font-mono leading-relaxed text-zinc-300">
           {description}
         </p>
         
@@ -37,7 +45,6 @@ const TimelineItem = ({ year, description, features, images }) => {
           </ul>
         )}
 
-        {/* --- THIS IS THE CORRECTED LINE --- */}
         {images && images.length > 0 && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
             {images.map((image, index) => (
