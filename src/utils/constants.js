@@ -28,24 +28,15 @@ const educationData = [
 
 // You can place this data in a separate file or directly in your App component
 const timelineData = [
+  
   {
-    year: "2015 – 2019",
-    description: "Completed Bachelor’s in Engineering (HONS) at Panjab University with a GPA of 8.2/10, building a strong foundation in computer science and software development.",
+    year: "2023 – 2025",
+    description: "Currently working at ContractPodAi as a Senior Frontend Developer on a leading AI-powered Contract Lifecycle Management (CLM) platform.",
     features: [
-      "Core coursework in software engineering, databases, and web technologies",
-      "Hands-on projects showcasing problem-solving and development skills"
-    ],
-    images: [
-    ],
-  },
-  {
-    year: "2019 – 2021",
-    description: "Joined Xlpat Labs, an AI-powered patent research platform, first as an intern and later as a Software Product Developer.",
-    features: [
-      "Migrated AngularJS/jQuery app to Vue.js, reducing build times by ~40%",
-      "Optimized PHP endpoints to improve response times by 20%",
-      "Built interactive dashboards with AmCharts – most-used feature of the platform",
-      "Integrated MySQL, MongoDB, and Elasticsearch for powerful search functionality"
+      "Redesigned Legal Dashboard UI with dynamic widgets, speeding decision-making by 30%",
+      "Converted 25+ legacy ASPX pages into Vue.js components for better maintainability",
+      "Boosted performance by consolidating API calls and centralizing state management with Vuex",
+      "Implemented lazy loading & caching, enhancing performance on low-bandwidth networks"
     ],
     images: [
     ],
@@ -63,13 +54,23 @@ const timelineData = [
     ],
   },
   {
-    year: "2023 – 2025",
-    description: "Currently working at ContractPodAi as a Senior Frontend Developer on a leading AI-powered Contract Lifecycle Management (CLM) platform.",
+    year: "2019 – 2021",
+    description: "Joined Xlpat Labs, an AI-powered patent research platform, first as an intern and later as a Software Product Developer.",
     features: [
-      "Redesigned Legal Dashboard UI with dynamic widgets, speeding decision-making by 30%",
-      "Converted 25+ legacy ASPX pages into Vue.js components for better maintainability",
-      "Boosted performance by consolidating API calls and centralizing state management with Vuex",
-      "Implemented lazy loading & caching, enhancing performance on low-bandwidth networks"
+      "Migrated AngularJS/jQuery app to Vue.js, reducing build times by ~40%",
+      "Optimized PHP endpoints to improve response times by 20%",
+      "Built interactive dashboards with AmCharts – most-used feature of the platform",
+      "Integrated MySQL, MongoDB, and Elasticsearch for powerful search functionality"
+    ],
+    images: [
+    ],
+  },
+  {
+    year: "2015 – 2019",
+    description: "Completed Bachelor’s in Engineering (HONS) at Panjab University with a GPA of 8.2/10, building a strong foundation in computer science and software development.",
+    features: [
+      "Core coursework in software engineering, databases, and web technologies",
+      "Hands-on projects showcasing problem-solving and development skills"
     ],
     images: [
     ],
