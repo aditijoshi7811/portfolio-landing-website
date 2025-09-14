@@ -23,7 +23,7 @@ function App() {
           data={myLandingData}
           imageComponent={<SpinningBorderAvatar
             src="/profile.jpeg"
-            size={250}
+            size={330}
             speed={8}
             borderWidth={6}
           />}
@@ -63,7 +63,7 @@ function App() {
           }
           title="My Experience"
         />
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 place-items-center p-2'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 place-items-center p-2 m-2'>
           <SpinningBorderCard
             title="Senior Front-End Developer | ContractPodAI"
             description="Spearheaded frontend modernization and performance improvements using React and Vue.js, boosting UI speed, usability, and scalability for a global CLM platform."

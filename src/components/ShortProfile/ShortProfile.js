@@ -72,7 +72,7 @@ const EmailCard = ({ title, buttonText, email }) => {
 // --- Main ShortProfile Component ---
 const ShortProfile = ({ data }) => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 m-4">
       <LaptopCard {...data.laptopCard} />
       <ListCard {...data.languagesCard} />
       <TechStackCard {...data.techStackCard} />
