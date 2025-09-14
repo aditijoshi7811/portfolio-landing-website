@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { useInView, animate } from 'framer-motion';
 import Tooltip from '../Tooltip/Tooltip';
+import { EyeIcon } from 'lucide-react';
 
 // --- Icon Components (can be moved to a separate file) ---
 const DownloadIcon = () => ( <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg> );
@@ -60,9 +61,9 @@ const HeroCard = ({ data, imageComponent }) => {
           </p>
           <div className="flex items-center gap-2 pt-4">
             {/* --- WRAP DOWNLOAD BUTTON WITH TOOLTIP --- */}
-            <Tooltip text="Download my CV">
-              <a href={cvUrl} download className="flex items-center gap-2 rounded-full border border-zinc-600 px-6 py-3 font-mono text-sm transition hover:border-green-400 hover:text-green-400">
-                DOWNLOAD CV <DownloadIcon />
+            <Tooltip text="View my CV">
+              <a href={cvUrl} target='_blank' className="flex items-center gap-2 rounded-full border border-zinc-600 px-6 py-3 font-mono text-sm transition hover:border-green-400 hover:text-green-400">
+                View CV <EyeIcon/>
               </a>
             </Tooltip>
             

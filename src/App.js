@@ -11,10 +11,36 @@ import ShortProfile from './components/ShortProfile/ShortProfile';
 import { projectData, educationData, timelineData, myLandingData, shortProfileData } from './utils/constants';
 import Footer from './components/Footer/Footer';
 import LetsTalk from './components/LetsTalk/LetsTalk';
+import Preloader from './components/PreLoader/PreLoader';
+import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
 
 function App() {
+  // State to manage the loading process
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate a loading delay
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500); // 2.5 seconds
+
+    return () => clearTimeout(timer); // Cleanup the timer
+  }, []);
+
+
   return (
-    <>
+    <AnimatePresence mode="wait">
+      {isLoading ? (
+        <Preloader key="preloader" />
+      ) : (
+        // motion.div will animate the main content in
+        <motion.div
+          key="content"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
       <div className="lg:w-[85%] mx-auto">
         <Nabvar />
 
@@ -144,8 +170,10 @@ function App() {
         {/* Let's Talk */}
         <LetsTalk />
       </div>
-      <Footer />
-    </>
+          <Footer />
+        </motion.div>
+      )}
+    </AnimatePresence>
 
   );
 }
