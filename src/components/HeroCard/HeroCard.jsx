@@ -43,11 +43,7 @@ const HeroCard = ({ data, imageComponent }) => {
 
   return (
     <section className="hero-card min-h-screen text-zinc-300 p-8 sm:pb-9 md:p-16 md:pt-0 md:pb-16 lg:p-24 lg:pt-0 lg:pb-0 flex flex-col justify-center">
-<<<<<<< HEAD
       <div className="flex flex-col-reverse lg:flex-row items-center gap-12 md:gap-16">
-=======
-      <div className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16">
->>>>>>> origin/main
         
         {/* Left Column: Bio and Links */}
         <div className="flex flex-1 flex-col gap-5 items-center text-center lg:items-start md:text-left">
@@ -72,11 +68,7 @@ const HeroCard = ({ data, imageComponent }) => {
             
             {/* --- WRAP SOCIAL LINKS WITH TOOLTIP --- */}
             {socialLinks.map((link) => (
-<<<<<<< HEAD
               <Tooltip key={link.name} text={`${link.name}`}>
-=======
-              <Tooltip key={link.name} text={`Find me on ${link.name}`}>
->>>>>>> origin/main
                 <a 
                   href={link.url} 
                   target={link.url.startsWith('#') ? '_self' : '_blank'}
