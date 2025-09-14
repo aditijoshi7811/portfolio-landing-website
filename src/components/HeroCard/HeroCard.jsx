@@ -1,12 +1,15 @@
 import React, { useEffect, useRef } from 'react';
 import { useInView, animate } from 'framer-motion';
+import Tooltip from '../Tooltip/Tooltip';
 
 // --- Icon Components (can be moved to a separate file) ---
 const DownloadIcon = () => ( <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg> );
 const FacebookIcon = () => ( <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v2.385z" /></svg> );
 const InstagramIcon = () => ( <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664 4.771 4.919 4.919 1.266.058 1.644.07 4.85.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z" /></svg> );
 const GithubIcon = () => ( <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> );
-const iconMap = { facebook: <FacebookIcon />, instagram: <InstagramIcon />, github: <GithubIcon /> };
+const LinkedInIcon = () => ( <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667h-3.554v-11.5h3.414v1.569h.049c.476-.9 1.637-1.852 3.37-1.852 3.602 0 4.268 2.37 4.268 5.455v6.328zm-14.693-13.003c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.064 2.063-2.064s2.063.926 2.063 2.064c0 1.139-.92 2.065-2.063 2.065zm1.777 13.003h-3.554v-11.5h3.554v11.5zm16.469-20h-22c-.552 0-1 .448-1 1v22c0 .552.448 1 1 1h22c.552 0 1-.448 1-1v-22c0-.552-.448-1-1-1z"/></svg> );
+const Portolio = () => ( <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" /></svg> );
+const iconMap = { facebook: <FacebookIcon />, instagram: <InstagramIcon />, github: <GithubIcon /> , linkedin: <LinkedInIcon />, portfolio: <Portolio /> };
 
 // --- NEW Animated StatItem Sub-component ---
 const StatItem = ({ value, label }) => {
@@ -15,7 +18,6 @@ const StatItem = ({ value, label }) => {
 
   useEffect(() => {
     if (isInView) {
-      // THE FIX: Convert the 'value' prop from a string to a number
       animate(0, Number(value), {
         duration: 2,
         onUpdate: (latest) => {
@@ -40,7 +42,7 @@ const HeroCard = ({ data, imageComponent }) => {
   const { jobTitle, greeting, firstName, lastName, tagline, cvUrl, socialLinks, stats } = data;
 
   return (
-    <section className="hero-card min-h-screen text-zinc-300 p-8 md:p-16 lg:p-24 flex flex-col justify-center">
+    <section className="hero-card min-h-screen text-zinc-300 p-8 sm:pb-9 md:p-16 md:pt-0 md:pb-16 lg:p-24 lg:pt-0 lg:pb-0 flex flex-col justify-center">
       <div className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16">
         
         {/* Left Column: Bio and Links */}
@@ -57,19 +59,25 @@ const HeroCard = ({ data, imageComponent }) => {
             {tagline}
           </p>
           <div className="flex items-center gap-2 pt-4">
-            <a href={cvUrl} download className="flex items-center gap-2 rounded-full border border-zinc-600 px-6 py-3 font-mono text-sm transition hover:border-green-400 hover:text-green-400">
-              DOWNLOAD CV <DownloadIcon />
-            </a>
-            {socialLinks.map((link) => (
-              <a 
-                key={link.name} 
-                href={link.url} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-600 transition hover:border-green-400 hover:text-green-400"
-              >
-                {iconMap[link.name]}
+            {/* --- WRAP DOWNLOAD BUTTON WITH TOOLTIP --- */}
+            <Tooltip text="Download my CV">
+              <a href={cvUrl} download className="flex items-center gap-2 rounded-full border border-zinc-600 px-6 py-3 font-mono text-sm transition hover:border-green-400 hover:text-green-400">
+                DOWNLOAD CV <DownloadIcon />
               </a>
+            </Tooltip>
+            
+            {/* --- WRAP SOCIAL LINKS WITH TOOLTIP --- */}
+            {socialLinks.map((link) => (
+              <Tooltip key={link.name} text={`Find me on ${link.name}`}>
+                <a 
+                  href={link.url} 
+                  target={link.url.startsWith('#') ? '_self' : '_blank'}
+                  rel={link.url.startsWith('#') ? undefined : 'noopener noreferrer'} 
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-600 transition hover:border-green-400 hover:text-green-400"
+                >
+                  {iconMap[link.name]}
+                </a>
+              </Tooltip>
             ))}
           </div>
         </div>

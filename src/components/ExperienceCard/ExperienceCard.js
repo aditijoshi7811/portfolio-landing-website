@@ -5,7 +5,7 @@ const ExperienceCard = ({ title, degree, dateRange, score, institution, isActive
   return (
     // 'group' class allows us to style children on hover of this parent
     // 'experience-card' is our custom class for the animation container
-    <div className="experience-card group relative w-full max-w-md rounded-2xl border border-zinc-800 bg-zinc-900 p-6 transition-colors duration-300 hover:border-green-500/30 hover:bg-green-900/20">
+    <div className="experience-card group min-h-[220px] relative w-full max-w-md rounded-2xl border border-zinc-800 bg-zinc-900 p-6 transition-colors duration-300 hover:border-green-500/30 hover:bg-green-900/20">
       
       {/* Animated SVG Border - Hidden by default, appears on hover */}
       <svg
@@ -21,13 +21,6 @@ const ExperienceCard = ({ title, degree, dateRange, score, institution, isActive
           className="path"
         />
       </svg>
-
-      {/* Radio Button - Top Right */}
-      <div className="absolute top-6 right-6 flex h-6 w-6 items-center justify-center rounded-full border-2 border-zinc-600 transition-colors duration-300 group-hover:border-green-400">
-        {isActive && (
-          <div className="h-2.5 w-2.5 rounded-full bg-green-400"></div>
-        )}
-      </div>
 
       {/* Main Content */}
       <div className="relative z-10">
