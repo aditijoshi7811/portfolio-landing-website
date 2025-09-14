@@ -33,17 +33,6 @@ const SmallInfoCard = ({ title, children }) => (
   </div>
 );
 
-const CodeSnippetCard = ({ title, subtitle, code, language }) => (
-  <div className="col-span-1 row-span-2 rounded-2xl bg-zinc-800 p-6">
-    <p className="font-mono text-sm text-zinc-400">{subtitle}</p>
-    <p className="font-mono text-2xl font-bold text-white mb-4">{title}</p>
-    <pre className="rounded-lg bg-[#1e1e2d] p-4 text-sm overflow-x-auto relative">
-      <code className="font-mono text-zinc-300">{code}</code>
-      <span className="absolute bottom-2 right-4 font-mono text-xs text-zinc-500">{language}</span>
-    </pre>
-  </div>
-);
-
 const EmailCard = ({ title, buttonText, email }) => {
   const [copied, setCopied] = useState(false);
 
