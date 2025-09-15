@@ -8,11 +8,8 @@ const CheckmarkIcon = () => (
 
 const TimelineItem = ({ year, description, features, images }) => {
   return (
-    // Use "items-baseline" for perfect vertical text alignment on desktop
     <div className="relative md:flex md:items-baseline md:gap-8">
-      
-      {/* --- RESPONSIVE CIRCLE MARKER --- */}
-      {/* Position matches the parent's line: left-5 on mobile, left-28 on desktop */}
+      {/* --- VERTICAL LINE & CIRCLE --- */}
       <div className="absolute left-5 top-3 h-5 w-5 -translate-x-1/2 transform rounded-full border-2 border-zinc-600 bg-zinc-900 md:left-28"></div>
 
       {/* --- YEAR SECTION --- */}

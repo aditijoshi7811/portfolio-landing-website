@@ -127,7 +127,7 @@ function App() {
             title="ContractPodAI"
             description="An AI-powered Contract Lifecycle Management (CLM) platform that streamlines legal workflows — from contract creation and negotiation to analysis and renewal — with modern, responsive front-end solutions."
             imageUrl='/contract_pod.jpeg'
-            liveSiteUrl='/contract_pod_demo.mp4'
+            liveSiteUrl='/contractPodAi_demo.webm'
             techStackIcons={['react','vuedotjs','typescript','vuetify','redux']}
           />
 

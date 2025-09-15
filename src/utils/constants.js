@@ -31,7 +31,7 @@ const timelineData = [
   
   {
     year: "2023 – 2025",
-    description: "Currently working at ContractPodAi as a Senior Frontend Developer on a leading AI-powered Contract Lifecycle Management (CLM) platform.",
+    description: "Worked at ContractPodAi as a Senior Frontend Developer on a leading AI-powered Contract Lifecycle Management (CLM) platform.",
     features: [
       "Redesigned Legal Dashboard UI with dynamic widgets, speeding decision-making by 30%",
       "Converted 25+ legacy ASPX pages into Vue.js components for better maintainability",
@@ -94,7 +94,7 @@ const myLandingData = {
   stats: [
     { value: "28", label: "Age" },
     { value: "6", label: "Years of Experience" },
-    { value: "6", label: "Projects Delivered" },
+    { value: "5", label: "Projects Delivered" },
     { value: "10", label: "Major Deployments" },
   ],
 };
@@ -110,10 +110,10 @@ const shortProfileData = {
   },
   techStackCard: {
     primary: "Vue.js",
-    stack: ["React", "Vue.js", "Angular", "TypeScript", "JavaScript", "Golang", "PHP", "Node.js", "MongoDB", "MySQL"]
+    stack: ["React", "Vue.js", "Angular", "TypeScript", "JavaScript", "Golang", "PHP", "MongoDB", "MySQL","Elasticsearch"]
   },
   architectCard: {
-    title: "Frontend & Full-Stack Solution Designer"
+    title: "Frontend & Full-Stack Solution Developer",
   },
   emailCard: {
     title: "Do you want to ask a question?",
