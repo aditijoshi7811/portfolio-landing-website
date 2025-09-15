@@ -122,7 +122,7 @@ function App() {
         </svg>
         } />
 
-        <div id="projects" className='grid grid-cols-1 lg:grid-cols-2 gap-8 place-items-center'>
+        <div id="projects" className='grid grid-cols-1 p-4 lg:grid-cols-2 gap-8 place-items-center'>
           <TiltingCard
             title="ContractPodAI"
             description="An AI-powered Contract Lifecycle Management (CLM) platform that streamlines legal workflows — from contract creation and negotiation to analysis and renewal — with modern, responsive front-end solutions."
