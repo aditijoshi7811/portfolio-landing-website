@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className="navbar-container">
       {/* Logo */}
       <div className="navbar-logo">
-        Aditi Joshi <span className="dot">.</span>
+        Aditi Joshi
       </div>
 
       {/* Links */}

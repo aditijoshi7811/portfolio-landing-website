@@ -34,8 +34,8 @@ const timelineData = [
     description: "Worked at ContractPodAi as a Senior Frontend Developer on a leading AI-powered Contract Lifecycle Management (CLM) platform.",
     features: [
       "Redesigned Legal Dashboard UI with dynamic widgets, speeding decision-making by 30%",
-      "Converted 25+ legacy ASPX pages into Vue.js components for better maintainability",
-      "Boosted performance by consolidating API calls and centralizing state management with Vuex",
+      "Converted 25+ legacy ASPX pages into React components for better maintainability",
+      "Boosted performance by consolidating API calls and centralizing state management with Redux",
       "Implemented lazy loading & caching, enhancing performance on low-bandwidth networks"
     ],
     images: [
