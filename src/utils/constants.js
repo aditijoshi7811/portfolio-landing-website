@@ -84,7 +84,7 @@ const myLandingData = {
   firstName: "Aditi",
   lastName: "Joshi",
   tagline: "Frontend Specialist & Full-Stack Developer | Experienced in building scalable, high-performance web applications",
-  cvUrl: "/Aditi_SeniorFrontendDeveloper_Resume.pdf", // update with your actual CV file path
+  cvUrl: "https://docs.google.com/document/d/1f6ZYQH_HOtKZ3PslqlxmYpjrtdzcZUz09Y9xvrMZaJc", // update with your actual CV file path
   socialLinks: [
     { name: 'linkedin', url: 'https://www.linkedin.com/in/aditi-joshi-463680166/' }, // replace with your LinkedIn URL
     { name: 'github', url: 'https://github.com/aditijoshi7811' },        // replace with your GitHub
