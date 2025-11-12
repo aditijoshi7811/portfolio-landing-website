@@ -45,8 +45,7 @@ const timelineData = [
     year: "2021 – 2023",
     description: "Worked at Kalido as a Senior Software Engineer, building AI-driven platforms to connect people and opportunities.",
     features: [
-      "Developed responsive Vue.js (Composition API) components improving hiring flow by 30%",
-      "Led migration from Vue 2.6 to Vue 3 with Pinia and Vite, mentoring junior developers",
+      "Developed responsive Reactjs components improving hiring flow by 30%",
       "Built unary & bidirectional gRPC endpoints in Golang with ~80% test coverage",
       "Integrated SendGrid across stack, reducing ops overhead and email errors"
     ],
@@ -109,7 +108,7 @@ const shortProfileData = {
     title: "Fluent in English, Hindi, and Punjabi"
   },
   techStackCard: {
-    primary: "Vue.js",
+    primary: "React.js",
     stack: ["React", "Vue.js", "Angular", "TypeScript", "JavaScript", "Golang", "PHP", "MongoDB", "MySQL","Elasticsearch"]
   },
   architectCard: {
