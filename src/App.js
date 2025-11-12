@@ -97,13 +97,13 @@ function App() {
           />
 
           <SpinningBorderCard
-            title="Senior Software Developer | Kalido"
+            title="Software Developer | Kalido"
             description="Delivered scalable front- and back-end solutions (React, Golang, gRPC) that accelerated hiring workflows and improved platform reliability with ~80% test coverage."
             avatarUrl="/3d-lamp.png"
           />
 
           <SpinningBorderCard
-            title="Senior Software Developer | Xlpat Labs"
+            title="Software Developer | Xlpat Labs"
             description="Revamped legacy systems into modern Vue.js apps, optimized backend performance, and built widely adopted dashboards to enhance patent search efficiency."
             avatarUrl="/hacker.png"
           />
