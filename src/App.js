@@ -98,7 +98,7 @@ function App() {
 
           <SpinningBorderCard
             title="Senior Software Developer | Kalido"
-            description="Delivered scalable front- and back-end solutions (Vue 3, Golang, gRPC) that accelerated hiring workflows and improved platform reliability with ~80% test coverage."
+            description="Delivered scalable front- and back-end solutions (React, Golang, gRPC) that accelerated hiring workflows and improved platform reliability with ~80% test coverage."
             avatarUrl="/3d-lamp.png"
           />
 
