@@ -92,13 +92,13 @@ function App() {
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 place-items-center p-2 m-2'>
           <SpinningBorderCard
             title="Senior Front-End Developer | ContractPodAI"
-            description="Spearheaded frontend modernization and performance improvements using React and Vue.js, boosting UI speed, usability, and scalability for a global CLM platform."
+            description="Spearheaded frontend modernization and performance improvements using Vue.js, boosting UI speed, usability, and scalability for a global CLM platform."
             avatarUrl="/3d-design.png"
           />
 
           <SpinningBorderCard
             title="Software Developer | Kalido"
-            description="Delivered scalable front- and back-end solutions (React, Golang, gRPC) that accelerated hiring workflows and improved platform reliability with ~80% test coverage."
+            description="Delivered scalable front- and back-end solutions (Vue, Golang, gRPC) that accelerated hiring workflows and improved platform reliability with ~80% test coverage."
             avatarUrl="/3d-lamp.png"
           />
 
